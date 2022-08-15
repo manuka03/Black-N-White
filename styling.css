@@ -1,0 +1,14 @@
+body{
+    background-color: #1B1A24;
+    color:aliceblue;
+}
+
+.button{
+    background-color: white;
+    color:#1B1A24;
+    vertical-align: middle;
+    height: 56px;
+    width:254px;
+    border-radius: 8px;
+
+}

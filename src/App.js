@@ -1,7 +1,8 @@
-import { ReactComponent as IconMenu1 } from './head.svg'
-import { ReactComponent as IconMenu2 } from './tagline.svg'
-import { ReactComponent as IconMenu3 } from './info.svg'
-import { useState } from 'react'
+import { ReactComponent as IconMenu1 } from './head.svg';
+import { ReactComponent as IconMenu2 } from './tagline.svg';
+import { ReactComponent as IconMenu3 } from './info.svg';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [teamcode, setteamcode] = useState(' ENTER A CODE....')
@@ -19,9 +20,13 @@ const App = () => {
         <IconMenu1 class = "head"/><br/>
         <IconMenu2 class = "tagline"/>
         <div>
+          <nav>
+          <Link to="/Enteruser">
           <button class ="button">
           Random Match!
           </button>
+          </Link>
+          </nav>
         </div>
         <div class ="major">OR</div> 
         <hr class="divi"/><div class="text"> PLAY WITH FRIENDS </div><hr class="divi"/>

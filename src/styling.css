@@ -1,0 +1,105 @@
+body{
+    background-color: #1B1A24;
+    color:aliceblue;
+    text-align: center;
+    vertical-align: middle;
+    font-family:'ralewaymedium';
+}
+h1{
+    font-family: major;
+    font-size: 80px;
+}
+.major{
+
+    font-family:'ralewaymedium';
+    font-weight: 100;
+}
+
+.button{
+    background-color: white;
+    color:#1B1A24;
+    height: 52px;
+    line-height: 77.9%;
+    letter-spacing: 0.05em;
+    font-family: 'ralewaymedium';
+    font-size: 18px;
+    width:60%;
+    border-radius: 8px;
+    position: relative;
+    margin-top:6vh;
+}
+.head{
+    position:relative;
+    margin-top: 10vh;
+}
+.major{
+    margin-top:5vh;
+    font-family: 'ralewaymedium';
+    font-size: 12px;
+    line-height: 77.9%;
+    letter-spacing: 0.115em;
+    color: #888696;
+}
+.divi{
+    display:inline-block;
+    width:35%;
+    background-color:#888696;
+    border: 0.5px solid #888696;
+    border-radius: 1.5px;
+    vertical-align: middle;
+}
+.text{
+    display:inline-block;
+    margin-left:1vh;
+    margin-right:1vh;
+    vertical-align: middle;
+    font-family: 'ralewaymedium';
+    font-size: 10px;
+    line-height: 77.9%;
+    letter-spacing: 0.03em;
+    color: #888696;
+}
+.tagline{
+    position:relative;
+    margin-top:3vh;
+}
+
+.textbox{
+    margin-top: 8vh;
+    width:60%;
+    background-color: #1B1A24;
+    height:52px;
+    color:#FFFFFF;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 8px;
+    stroke:#FFFFFF;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 4vw;
+}
+::placeholder{
+    color:#FFFFFF;
+    opacity:40%;
+}
+.info{
+    position:fixed;
+    left:8vw;
+    top:92vh;
+}
+@font-face {
+    font-family: 'major';
+    src: url('fontstyles/majormonodisplay-regular-webfont.woff2') format('woff2'),
+         url('fontstyles/majormonodisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('fontstyles/raleway-medium-webfont.woff2') format('woff2'),
+         url('fontstyles/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

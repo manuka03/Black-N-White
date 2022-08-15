@@ -1,6 +1,18 @@
 body{
     background-color: #1B1A24;
     color:aliceblue;
+    text-align: center;
+    vertical-align: middle;
+    font-family:'ralewaymedium';
+}
+h1{
+    font-family: major;
+    font-size: 80px;
+}
+.major{
+
+    font-family:'ralewaymedium';
+    font-weight: 100;
 }
 
 .button{
@@ -8,7 +20,25 @@ body{
     color:#1B1A24;
     vertical-align: middle;
     height: 56px;
-    width:254px;
+    width:60%;
     border-radius: 8px;
+    position: relative;
+    left:20%;
+}
+@font-face {
+    font-family: 'major';
+    src: url('majormonodisplay-regular-webfont.woff2') format('woff2'),
+         url('majormonodisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('raleway-medium-webfont.woff2') format('woff2'),
+         url('raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
 }

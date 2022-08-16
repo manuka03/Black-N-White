@@ -62,6 +62,8 @@ h1{
 .tagline{
     position:relative;
     margin-top:3vh;
+    display:block;
+    margin-left:42.2vw;    
 }
 
 .textbox{
@@ -120,8 +122,9 @@ h1{
     font-family: 'ralewaymedium';
 }
 .cross{
-    margin-left: 50vw;
+    margin-left: 53vw;
     margin-top:3vh;
+    display: block;
 }
 .next{
     margin-left:40vw;

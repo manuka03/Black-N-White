@@ -3,8 +3,9 @@ import { ReactComponent as IconMenu2 } from './tagline.svg'
 import { ReactComponent as IconMenu3 } from './info.svg'
 import { ReactComponent as IconMenu4 } from './close.svg'
 import { ReactComponent as IconMenu5 } from './next.svg'
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { useState } from 'react';
+import $ from 'jquery';
 let fusername='';
 
 const Enteruser = () =>{
@@ -25,16 +26,21 @@ const Enteruser = () =>{
   const Icon = ()=>{
     if(username ===''){
       return(<div>
-      <IconMenu5 className="nextempty"/></div>)
+      <IconMenu5 id = "nex" className="nextempty"/></div>)
     }
     return(<Link to="/Enterword">
-    <IconMenu5 className="next" onClick={store}/>
+    <IconMenu5 id = "nex" className="next" onClick={store} type='button'/>
     </Link>)
   }
+
+    const navigate = useNavigate();
+    function goToLoginPage() {fusername = username ; 
+      navigate('/Enterword');} 
+
     return(
       <div>
         <div className="blur">
-        <IconMenu1 className = "head"/><br/>
+        <IconMenu1 className = "head"/>
         <IconMenu2 className = "tagline"/>
         <div>
           <button className ="button">
@@ -54,15 +60,15 @@ const Enteruser = () =>{
         <div className="popup">
             <nav>
             <Link to="/">
-                <IconMenu4 className="cross"/><br/>
+                <IconMenu4 className="cross"/>
             </Link>
             </nav>
             <div className="popupin">Enter Username....</div>
-            <div><input value={username} onChange={handleOnChange} className="textbox2"/>
+            <div><input value={username} onChange={handleOnChange} onKeyPress={(e) => {if(e.key === 'Enter'){goToLoginPage()}}} className="textbox2"/>
             <Errormessage/>
             </div>
             <nav>
-            <Icon/>
+            <Icon />
             </nav>
         </div>
         </div>

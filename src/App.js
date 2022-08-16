@@ -11,8 +11,7 @@ const App = () => {
   }
   return(
     <div>
-        <IconMenu1 className = "head"/><br/>
-        <IconMenu2 className = "tagline"/>
+      <IconMenu1 className = "head"/><IconMenu2 className = "tagline"/>
         <div>
           <nav>
           <Link to="/Enteruser">

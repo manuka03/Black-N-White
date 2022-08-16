@@ -10,35 +10,28 @@ const App = () => {
     setteamcode('  '+event.target.value)
   }
   return(
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> Swarnakshara </title>
-      </head>
-      <body>
-        <IconMenu1 class = "head"/><br/>
-        <IconMenu2 class = "tagline"/>
+    <div>
+        <IconMenu1 className = "head"/><br/>
+        <IconMenu2 className = "tagline"/>
         <div>
           <nav>
           <Link to="/Enteruser">
-          <button class ="button">
+          <button className ="button">
           Random Match!
           </button>
           </Link>
           </nav>
         </div>
-        <div class ="major">OR</div> 
-        <hr class="divi"/><div class="text"> PLAY WITH FRIENDS </div><hr class="divi"/>
-        <div><input placeholder={' ENTER A CODE....'}  onChange={handleOnChange} class="textbox"/></div>
+        <div className ="major">OR</div> 
+        <hr className="divi"/><div className="text"> PLAY WITH FRIENDS </div><hr className="divi"/>
+        <div><input placeholder={' ENTER A CODE....'}  onChange={handleOnChange} className="textbox"/></div>
         <div>
-          <button class ="button">
+          <button className ="button">
             Play!
           </button> 
         </div>
-        <IconMenu3 class="info"/>
-      </body>
-    </html>
+        <IconMenu3 className="info"/>
+        </div>
   )
 }
 export default App;

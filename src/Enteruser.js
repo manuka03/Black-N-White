@@ -4,51 +4,70 @@ import { ReactComponent as IconMenu3 } from './info.svg'
 import { ReactComponent as IconMenu4 } from './close.svg'
 import { ReactComponent as IconMenu5 } from './next.svg'
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+let fusername='';
 
 const Enteruser = () =>{
+  const [username, setusername] = useState('');
+  const handleOnChange = (event) => {
+    setusername(event.target.value);
+  }
+  const Errormessage = ()=>{
+    if(username===''){
     return(
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> Swarnakshara </title>
-      </head>
-      <body>
-        <div class="blur">
-        <IconMenu1 class = "head"/><br/>
-        <IconMenu2 class = "tagline"/>
+      <div className="errormessage">***Enter valid username</div>
+    )}
+  }
+  const store = ()=>{
+    fusername = username;
+  }
+
+  const Icon = ()=>{
+    if(username ===''){
+      return(<div>
+      <IconMenu5 className="nextempty"/></div>)
+    }
+    return(<Link to="/Enterword">
+    <IconMenu5 className="next" onClick={store}/>
+    </Link>)
+  }
+    return(
+      <div>
+        <div className="blur">
+        <IconMenu1 className = "head"/><br/>
+        <IconMenu2 className = "tagline"/>
         <div>
-          <button class ="button">
+          <button className ="button">
           Random Match!
           </button>
         </div>
-        <div class ="major">OR</div> 
-        <hr class="divi"/><div class="text"> PLAY WITH FRIENDS </div><hr class="divi"/>
-        <div><input placeholder={' ENTER A CODE....'}  class="textbox"/></div>
+        <div className ="major">OR</div> 
+        <hr className="divi"/><div className="text"> PLAY WITH FRIENDS </div><hr className="divi"/>
+        <div><input placeholder={' ENTER A CODE....'}  className="textbox"/></div>
         <div>
-          <button class ="button">
+          <button className ="button">
             Play!
           </button> 
         </div>
-        <IconMenu3 class="info"/>
+        <IconMenu3 className="info"/>
         </div>
-        <div class="popup">
+        <div className="popup">
             <nav>
             <Link to="/">
-                <IconMenu4 class="cross"/><br/>
+                <IconMenu4 className="cross"/><br/>
             </Link>
             </nav>
-            <div class="popupin">Enter Username....</div>
-            <div><input class="textbox2"/></div>
+            <div className="popupin">Enter Username....</div>
+            <div><input value={username} onChange={handleOnChange} className="textbox2"/>
+            <Errormessage/>
+            </div>
             <nav>
-            <Link to="/Enterword">
-            <IconMenu5 class="next"/>
-            </Link>
+            <Icon/>
             </nav>
         </div>
-      </body>
-    </html>
+        </div>
     );
 }
 
 export default Enteruser;
+export {fusername};

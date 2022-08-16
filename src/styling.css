@@ -1,3 +1,6 @@
+*{
+    box-sizing: borderbox;
+}
 body{
     background-color: #1B1A24;
     color:aliceblue;
@@ -61,10 +64,12 @@ h1{
 }
 .tagline{
     position:relative;
+    width: 50%;
     margin-top:3vh;
     display:block;
-    margin-left:42.2vw;    
+    margin-left:25%;    
 }
+
 
 .textbox{
     margin-top: 8vh;

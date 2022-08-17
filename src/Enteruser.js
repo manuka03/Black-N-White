@@ -5,7 +5,6 @@ import { ReactComponent as IconMenu4 } from './close.svg'
 import { ReactComponent as IconMenu5 } from './next.svg'
 import { Link , useNavigate} from "react-router-dom";
 import { useState } from 'react';
-import $ from 'jquery';
 let fusername='';
 
 const Enteruser = () =>{

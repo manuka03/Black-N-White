@@ -147,6 +147,52 @@ h1{
     font-family: 'ralewaymedium';
     font-size:'16px';
 }
+.dropdown{
+    display: block;
+    margin-top:10vh;
+    height: 52px;
+    width:60vw;
+    padding-left: 3vh;
+    background-color: #1B1A24;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 8px;
+    color:#FFFFFF;
+    position:relative;
+    margin-left:20vw;
+    font-size:18px;
+    font-family: 'ralewaymedium';
+}
+.option{
+    background-color: #FFFFFF;
+    color: #1B1A24;
+    font-size:18px;
+    font-family: 'ralewaymedium';
+}
+.letters{
+    display: inline-block;
+    margin-left: auto;
+    margin-top:10vh;
+    margin-bottom: 10vh;
+    
+}
+.letter{
+    background-color: #1B1A24;
+    height:calc(100vw/8);
+    border-top: none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1.5px solid #FFFFFF;
+    width:7vw;
+    margin-left: 1vw;
+    font-size: calc(100vw/16);
+    color: #FFFFFF;
+    font-family: 'ralewaymedium';
+    text-align: center;
+}
+
+.hide{
+    color: #1B1A24;
+}
 @font-face {
     font-family: 'major';
     src: url('fontstyles/majormonodisplay-regular-webfont.woff2') format('woff2'),

@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Enteruser from "./Enteruser";
 import Enterword from "./Enterword";
+import Match from './Match';
+import Test from './test';
 import './styling.css';
 import{BrowserRouter,Routes,Route,} from "react-router-dom";
 
@@ -11,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(<BrowserRouter>
       <Route path="/" element={<App />} />
       <Route path="/Enteruser" element={<Enteruser />} />
       <Route path="/Enterword" element={<Enterword />} />
+      <Route path="/Enterword/Match" element={<Match />} />
+      <Route path="/test" element={<Test />} />
     </Routes>
   </BrowserRouter>
 )

@@ -4,6 +4,9 @@ import Enteruser from "./Enteruser";
 import Enterword from "./Enterword";
 import Match from './Match';
 import Test from './test';
+import Win from './Win';
+import Lose from './Lose';
+
 import './styling.css';
 import{BrowserRouter,Routes,Route,} from "react-router-dom";
 
@@ -15,6 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(<BrowserRouter>
       <Route path="/Enterword" element={<Enterword />} />
       <Route path="/Enterword/Match" element={<Match />} />
       <Route path="/test" element={<Test />} />
+      <Route path="/Win" element={<Win />} />
+      <Route path="/Lose" element={<Lose />} />
     </Routes>
   </BrowserRouter>
 )

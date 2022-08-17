@@ -7,10 +7,37 @@ body{
     text-align: center;
     vertical-align: middle;
     font-family:'ralewaymedium';
+
 }
 h1{
     font-family: major;
     font-size: 80px;
+}
+.h3{
+    font-size: 80px;
+    font-family:'ralewaymedium';
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 30vh;
+    margin-left: 15%;
+}
+
+#la{
+    font-size: 1.60em;
+    font-weight: 100;
+    text-align: left;
+    margin-left: 15%;
+}
+.qm{
+    position: absolute;
+    left:5vw;
+    top: 95vh;
+}
+.logo{
+    position: absolute;
+    left:80vw;
+    top: 92.5vh;
 }
 .major{
 
@@ -68,6 +95,26 @@ h1{
     margin-top:3vh;
     display:block;
     margin-left:25%;    
+}
+.side{
+    width :20%;
+    display:inline-block;
+    height: 80vh;
+    margin-top: 7vh;
+
+}
+
+.side2{
+    width: 80%;
+    font-size: 2em;
+    padding: 10%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-top: 15vh;
+    font-weight: 100;
+    text-align: left;
+
 }
 
 
@@ -141,7 +188,7 @@ h1{
 }
 .errormessage{
     text-align: left;
-    color:red;
+    color:rgb(116, 116, 116);
     padding-left: 6vw;
     padding-top: 1vh;
     font-family: 'ralewaymedium';

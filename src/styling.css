@@ -23,6 +23,15 @@ h1{
     margin-left: 15%;
 }
 
+.la{
+    text-align: left;
+    font-size: 1.2em;
+    padding: 10vw;
+    color:#888696;
+    font-weight: 100d;
+
+}
+
 #la{
     font-size: 1.60em;
     font-weight: 100;
@@ -102,6 +111,12 @@ h1{
     height: 80vh;
     margin-top: 7vh;
 
+}
+
+#timer{
+    position: absolute;
+    left:45vw;
+    top: 90vh;
 }
 
 .side2{

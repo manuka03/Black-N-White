@@ -3,6 +3,7 @@ import App from './App';
 import Enteruser from "./Enteruser";
 import Enterword from "./Enterword";
 import Match from './Match';
+import Guess from './Guess';
 import Test from './test';
 import Win from './Win';
 import Lose from './Lose';
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<BrowserRouter>
       <Route path="/Enteruser" element={<Enteruser />} />
       <Route path="/Enterword" element={<Enterword />} />
       <Route path="/Enterword/Match" element={<Match />} />
+      <Route path="/Guess" element={<Guess />} />
       <Route path="/test" element={<Test />} />
       <Route path="/Win" element={<Win />} />
       <Route path="/Lose" element={<Lose />} />

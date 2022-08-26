@@ -1,5 +1,6 @@
 import { ReactComponent as IconMenu1 } from './logo.svg'
 import { ReactComponent as IconMenu2 } from './qm.svg'
+import { ReactComponent as IconMenu3 } from './qm.svg'
 import { useState } from 'react';
 import React from "react";
 import ReactDOM from "react-dom";
@@ -28,16 +29,25 @@ const renderTime = ({ remainingTime }) => {
 } 
 };
 const Guess = () =>{
+  
   const Navigate = useNavigate();
+  const [teamcode, setteamcode] = useState(' ENTER A CODE....')
+  const handleOnChange = (event) => {
+    setteamcode('  '+event.target.value)
+  }
   return (
-    
-    <div className="App">
-      
+       <div>
+
+        <h2>Guesses</h2>
+       <div><input placeholder={' ENTER WORD...'}  onChange={handleOnChange} className="textbox"/></div>
+
       <div className="timer-wrapper">
       <button className ="button">
           Submit?
         </button>
-        <div className="la">Letters definitely in the word...<br/></div>
+        <div className="la">Letters definitely in the word...<br/>
+        <div></div>
+        </div>
         <div className="la">Letters NOT in the word...<br/></div>
         <div id="timer">
         <CountdownCircleTimer

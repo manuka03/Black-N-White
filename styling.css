@@ -9,6 +9,41 @@ h1{
     font-family: major;
     font-size: 80px;
 }
+@import "compass/css3";
+
+.wrapper {
+  position: relative;
+  margin: 40px auto;
+  background: #1B1A24;
+}
+@property --percentage {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+  }
+  
+  .chart {
+    background: conic-gradient(white var(--percentage), #1B1A24 0);
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    animation: timer 60s infinite linear;
+  }
+  
+  @keyframes timer {
+    to {
+      --percentage: 100%;
+    }
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 2rem;
+  }
 .major{
 
     font-family:'ralewaymedium';
@@ -25,6 +60,9 @@ h1{
     position: relative;
     left:20%;
 }
+.top{
+    margin-top: 20vh;
+}
 @font-face {
     font-family: 'major';
     src: url('fontstyles/majormonodisplay-regular-webfont.woff2') format('woff2'),
@@ -33,7 +71,56 @@ h1{
     font-style: normal;
 
 }
+.box{
+    height: 5vh;
+}
 
+.btn{
+    width: 60%;
+    background-color: #EEEEEE;
+    color:#1B1A24;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: #ADADAD
+}
+
+input[type=text], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color : #1B1A24; 
+    box-sizing: border-box;
+    color : white;
+    font-size : 18px;
+  }
+div[name="result"] {
+    font-family: 'ralewaymedium';
+    font-size: 80px;
+    margin:auto;
+    text-align: left;
+    padding-left: 5vw;
+}
+#decrement-btn
+{
+    height: 50px;
+    width: 120px;
+    padding: 0 40px;
+    border-radius: 10px;
+    font-size: 40px;
+    background-color: #2e8d46;
+    border: 2px solid #2e8d46;
+    color: white;
+    margin: 20px;
+}
 @font-face {
     font-family: 'ralewaymedium';
     src: url('fontstyles/raleway-medium-webfont.woff2') format('woff2'),

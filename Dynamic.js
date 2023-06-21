@@ -78,10 +78,6 @@ const invalid = document.getElementById('invalid');
 const pie = document.querySelector('.chart');
 
 function process() {
-    //pie.style.animation = "none";
-    //pie.style.setProperty('--percentage', '40%');
-    //pie.style.setProperty('--percentage', '0%');
-    //pie.style.animation = "timer 60s infinite linear";
     const chartContainer = document.getElementById("chartcontainer");
     const chart = document.querySelector(".chart");
       chartContainer.removeChild(chart);

@@ -3,7 +3,7 @@ An intriguing word-guessing game based on logic.
 Link to game: https://manashree635315.github.io/Black-N-White/Index.html
 
 ## Player Guide
-Enter the number of letters in the word you want to guess.
+Enter the number of letters in the word you want to guess. (In the range 4 to 6)
 The game will generate a random word with that length.
 You have to take turns guessing words of the same length.
 After each guess, you will be informed of the number of 'Black' and 'White' letters in the guessed word. Here

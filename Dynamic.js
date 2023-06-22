@@ -1,27 +1,33 @@
 let counter = 10;
-let num = 4;
-let t = "FEAR";
+var num;
+var t = {0:"hello"};
+var maitra = "";
 var s;
+var te = {"0": "hello"};
 var guesses;
 const inp = document.getElementById('in');
-const play = document.getElementById('Play');
-function playi () {
-    console.log(inp.length);
-    if(num==5)
-    {t = "ANIME";}
-    if(num==6)
-    {t = "IMPORT";}
+
+function playi() {
     num = inp[0].value;
-    guesses = 10;
-   window.location = 'Mainscreen.html';
+    console.log(num);
+    let url = `https://random-word-api.herokuapp.com/word?length=${num}`;
+   
+    t = fetch(url).then(response => response.json()).then(result=>(te = result));
+    var v = setTimeout( fun, 1000);
+    
+    //window.location = 'Mainscreen.html';   
 }
+function fun()
+{
+    console.log(typeof te);
+    console.log(te["0"]);
+    sessionStorage.setItem("wordtarget", te["0"]);
+    window.location = 'Mainscreen.html'; 
+    //console.log(Object.values(te)[0]);    
+}
+sessionStorage.getItem("wordtarget");
 console.log(num);
-function mybutton() {
-    var life = document.createElement("img");
-    life.setAttribute("src", "heart.svg");
-    life.setAttribute("class", "hearts");
-    document.body.appendChild(life);
-   }
+console.log(guesses);
 const wordin = document.getElementById('word');
 const counterValue = document.getElementById('counter-value');
 function dec_guesses() {
@@ -37,24 +43,24 @@ function count() {
     B=0;
     W=0;
     console.log(s);
-    console.log(t);
+    console.log(maitra);
     for(let i =0;i<s.length;i++)
 		{
-			for(let j =0;j<t.length;j++)
-			{
-				if(i<s.length&j<t.length)
-					{
-                        if(s.charAt(i)==t.charAt(j))
-                        {
-                            if(i==j)
-                            {
-                                W++;
-                            }else{B++;}
-                            i++;
-                            j=0;
-                        }
-					}	
-			}
+            if(s.charAt(i)==maitra.charAt(i))
+            {W++;}
+            else
+            {
+                for(let j =0;j<maitra.length;j++)
+                {
+                    if(s.charAt(i)==maitra.charAt(j)&&i!=j)
+                    {   
+                        B++;
+                        i++;
+                        j=0;
+                    }
+                    
+                }
+            }
 		}
     if(W == s.length)
 	{
@@ -69,13 +75,17 @@ function add_word()
 }
 var exists = true;
 var timer = setTimeout(losescreen, 60000);
+
 function process() {
     clearTimeout(timer);
     timer = setTimeout(losescreen, 600000);
+    maitra = sessionStorage.getItem("wordtarget");
+    console.log(maitra);
     s = wordin[0].value;
+    console.log(s.length);
     exists = true;
     fetchApi(s);
-    if(s.length==t.length&&exists==true)
+    if(s.length==maitra.length&&exists==true)
     {
         dec_guesses();
         count();

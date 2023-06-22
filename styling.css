@@ -121,6 +121,10 @@ div[name="result"] {
   font: major;
 }
 
+.wishes{
+  font-size: 20px;
+}
+
 @font-face {
     font-family: 'ralewaymedium';
     src: url('fontstyles/raleway-medium-webfont.woff2') format('woff2'),

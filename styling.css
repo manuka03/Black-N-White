@@ -25,8 +25,8 @@ h1{
   .chart {
     background: conic-gradient(white var(--percentage), #1B1A24 0);
     border-radius: 50%;
-    width: 20vw;
-    height: 20vw;
+    width: 10vh;
+    height: 10vh;
     animation: timer 60s infinite linear;
   }
   
@@ -55,13 +55,13 @@ h1{
     color:#1B1A24;
     vertical-align: middle;
     height: 56px;
-    width:60%;
+    width:50vh;
     border-radius: 8px;
     position: relative;
     left:20%;
 }
 .top{
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 @font-face {
     font-family: 'major';
@@ -74,9 +74,16 @@ h1{
 .box{
     height: 5vh;
 }
-
+#pastguesses{
+  font-size: 20px;
+  color: #888696;
+}
+.hint{
+  color: #888696;
+  font-size: 18px;
+}
 .btn{
-    width: 60%;
+    width: 50vh;
     background-color: #EEEEEE;
     color:#1B1A24;
     padding: 14px 20px;
@@ -91,7 +98,7 @@ h1{
 }
 
 input[type=text], select {
-    width: 60%;
+    width: 50vh;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -109,18 +116,11 @@ div[name="result"] {
     text-align: left;
     padding-left: 5vw;
 }
-#decrement-btn
-{
-    height: 50px;
-    width: 120px;
-    padding: 0 40px;
-    border-radius: 10px;
-    font-size: 40px;
-    background-color: #2e8d46;
-    border: 2px solid #2e8d46;
-    color: white;
-    margin: 20px;
+#counter-value{
+  font-size: 20px;
+  font: major;
 }
+
 @font-face {
     font-family: 'ralewaymedium';
     src: url('fontstyles/raleway-medium-webfont.woff2') format('woff2'),

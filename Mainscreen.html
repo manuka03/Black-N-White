@@ -8,18 +8,17 @@
     
 </head>
 <body>
-    <button onclick="mybutton()" id="mybutton">Click Me</button>
-    <div id="counter-value">05 GUESSES</div>
-    <button id="decrement-btn">-</button>
-
-    <script src= "Dynamic.js"></script>
-
-    <input type="text" id="word" name="word" placeholder="Enter word...">
+    <div id="counter-value">10 GUESSES</div>
+    <form  id="word">
+    <input type="text" name="word" placeholder="Enter word...">
+    </form>
     <button id = "Guess" class = "btn" onclick="process()"> Submit? </button>  
+    <div id = "pastguesses"></div>
     <div class = "hint">Letters definitely in the word </div>
     <input type="text" id="fname" name="fname" placeholder="E I G">
     <div class = "hint">Letters NOT in the word </div>
     <input type="text" id="fname" name="fname" placeholder="F R V W H">
     <div class="chart"></div>
+    <script src= "Dynamic.js"></script>
 </body>
 </html>

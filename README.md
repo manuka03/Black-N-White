@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# Black N White
+An intriguing word-guessing game based on logic.
+Link to game: https://manashree635315.github.io/Black-N-White/Index.html
 
-You can use the [editor on GitHub](https://github.com/manashree635315/Black-N-White/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Player Guide
+Enter the number of letters in the word you want to guess. (In the range 4 to 6)
+The game will generate a random word with that length.
+You have to take turns guessing words of the same length.
+After each guess, you will be informed of the number of 'Black' and 'White' letters in the guessed word. Here
+* Black letters indicate letters that are present in the target word but at some place other than they appear in the guessed word.
+* White letters indicate letters that are present in the target word at the same place as they appear in the guessed word.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Crack the word within 10 guesses and you win the game. 
+There's also a 60 seconds timer for each guess to increase the difficulty.
 
-### Markdown
+TechStack Used:
+HTML, CSS, Javascript
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/manashree635315/Black-N-White/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+APIs used:
+Random word generator,
+Dictionary 

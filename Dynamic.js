@@ -74,14 +74,17 @@ function add_word()
 }
 var exists = true;
 var timer = setTimeout(losescreen, 60000);
-
+const inv = document.getElementById('invalid');
 function process() {
     clearTimeout(timer);
     timer = setTimeout(losescreen, 600000);
+    invalid.innerHTML = "";
     maitra = sessionStorage.getItem("wordtarget");
+    maitra = maitra.toUpperCase();
     console.log(maitra);
     s = wordin[0].value;
     console.log(s.length);
+    s = s.toUpperCase();
     exists = true;
     fetchApi(s);
     if(s.length==maitra.length&&exists==true)
@@ -91,6 +94,7 @@ function process() {
         add_word();
     }else
     {
+        invalid.innerHTML = "INVALID GUESS!";
         console.log("INVALID GUESS!");
     }
 

@@ -1,9 +1,9 @@
 let counter = 10;
 var num;
-var t = {0:"hello"};
+var t = {0:"fo"};
 var maitra = "";
 var s;
-var te = {"0": "hello"};
+var te;
 var guesses;
 const inp = document.getElementById('in');
 
@@ -11,9 +11,9 @@ function playi() {
     num = inp[0].value;
     console.log(num);
     let url = `https://random-word-api.herokuapp.com/word?length=${num}`;
-   
+    te =  {"0": ""};
     t = fetch(url).then(response => response.json()).then(result=>(te = result));
-    var v = setTimeout( fun, 1000);
+    var v = setTimeout( fun, 2000);
     
     //window.location = 'Mainscreen.html';   
 }
@@ -55,8 +55,7 @@ function count() {
                     if(s.charAt(i)==maitra.charAt(j)&&i!=j)
                     {   
                         B++;
-                        i++;
-                        j=0;
+                        j = maitra.length;
                     }
                     
                 }

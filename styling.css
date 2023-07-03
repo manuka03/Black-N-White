@@ -21,18 +21,34 @@ h1{
     inherits: false;
     syntax: "<percentage>";
   }
-  
+  @property --percentag {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+  }
   .chart {
     background: conic-gradient(white var(--percentage), #1B1A24 0);
-    border-radius: 50%;
+    border-radius: 100%;
     width: 10vh;
     height: 10vh;
     animation: timer 60s infinite linear;
   }
   
+  .chart1 {
+    background: conic-gradient(rgb(254, 254, 254) var(--percentag), #1B1A24 0);
+    border-radius: 100%;
+    width: 10vh;
+    height: 10vh;
+    animation: time 60s infinite linear;
+  }
   @keyframes timer {
     to {
       --percentage: 100%;
+    }
+  }
+  @keyframes time {
+    to {
+      --percentag: 100%;
     }
   }
   

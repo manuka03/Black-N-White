@@ -74,8 +74,18 @@ function add_word()
 }
 var exists = true;
 var timer = setTimeout(losescreen, 60000);
-const inv = document.getElementById('invalid');
+const invalid = document.getElementById('invalid');
+const pie = document.querySelector('.chart');
+
 function process() {
+    //pie.style.animation = "none";
+    //pie.style.setProperty('--percentage', '40%');
+    //pie.style.setProperty('--percentage', '0%');
+    //pie.style.animation = "timer 60s infinite linear";
+    const chartContainer = document.getElementById("chartcontainer");
+    const chart = document.querySelector(".chart");
+      chartContainer.removeChild(chart);
+      chartContainer.innerHTML = '<div class="chart"></div>';
     clearTimeout(timer);
     timer = setTimeout(losescreen, 600000);
     invalid.innerHTML = "";
@@ -104,10 +114,12 @@ function winscreen()
 {
     window.location = 'WinnerScreen.html';
 }
-
+const ans = document.getElementById('ans');
 function losescreen()
 {
-    window.location = 'LosingScreen.html';
+    window.location = 'LosingScreen.html';   
+    var x = sessionStorage.getItem("wordtarget");
+    ans.innerHTML = "The word was mf "+x;   
 }
 
 function replay()
